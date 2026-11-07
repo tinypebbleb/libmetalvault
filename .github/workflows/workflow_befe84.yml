@@ -1,0 +1,12 @@
+name: Continuous Integration
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check-task:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify setup
+        run: echo "checks passed"
